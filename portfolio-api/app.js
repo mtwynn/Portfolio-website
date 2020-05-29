@@ -17,6 +17,7 @@ app.use((req, res, next) => {
     "GET, POST, PUT, PATCH, DELETE"
   );
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.setHeader("Content-Disposition", "attachment;filename=resume.pdf")
   next();
 });
 
@@ -49,6 +50,11 @@ app.post("/api/email", (req, res, next) => {
         success: false,
       });
     });
+});
+
+app.get('/download', function(req, res){
+  const file = `${__dirname}/resume.pdf`;
+  res.download(file); // Set disposition and send it.
 });
 
 app.listen(8000, "0.0.0.0");
