@@ -38,15 +38,9 @@ class App extends React.Component {
       contact: {
         title: "Let's talk",
       },
-      value: "recents",
     };
   }
 
-  handleChange(event, newValue) {
-    this.setState({
-      value: newValue,
-    });
-  }
   render() {
     return (
       <Router>

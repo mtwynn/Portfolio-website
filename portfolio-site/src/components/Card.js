@@ -31,7 +31,7 @@ let Card = (props) => {
         <Paper
           elevation={3}
           style={{ borderRadius: "10px" }}
-          onClick={() => setFlipped(true)}
+          onMouseEnter={() => setFlipped(true)}
         >
           <img
             className="t-card-image"
@@ -45,7 +45,7 @@ let Card = (props) => {
         <Paper
           elevation={3}
           style={{ borderRadius: "10px" }}
-          onClick={() => setFlipped(false)}
+          onMouseLeave={() => setFlipped(false)}
         >
           This is a description
         </Paper>
