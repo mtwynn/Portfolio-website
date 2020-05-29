@@ -1,16 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import { Button, Link } from "@material-ui/core";
-import Axios from "axios";
 import "./ResumePage.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 let Resume = (props) => {
+  /*
   let handleDownload = () => {
     Axios.post("http://localhost:8000/download").then((response) => {
       console.log(response);
     });
-  };
+  };*/
 
   return (
     <div

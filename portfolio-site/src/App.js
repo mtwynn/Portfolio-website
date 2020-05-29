@@ -1,8 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { Avatar } from "@material-ui/core";
+
 import "./App.css";
-import Pdf from "/";
 
 import Footer from "./components/Footer/Footer";
 import HomePage from "./pages/HomePage/HomePage";
@@ -37,14 +38,23 @@ class App extends React.Component {
       contact: {
         title: "Let's talk",
       },
+      value: "recents",
     };
+  }
+
+  handleChange(event, newValue) {
+    this.setState({
+      value: newValue,
+    });
   }
   render() {
     return (
       <Router>
         <Container className="p-0" fluid>
           <Navbar className="border-bottom" expand="lg" sticky="top" bg="white">
-            <Navbar.Brand href="/">Tam Nguyen</Navbar.Brand>
+            <Navbar.Brand href="/">
+              <Avatar>TN</Avatar>
+            </Navbar.Brand>
 
             <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
             <Navbar.Collapse id="navbar-toggle">
