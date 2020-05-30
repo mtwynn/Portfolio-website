@@ -2,11 +2,11 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import "./App.css";
-import Pdf from "/";
 
 import Footer from "./components/Footer/Footer";
 import HomePage from "./pages/HomePage/HomePage";
 import AboutPage from "./pages/AboutPage/AboutPage";
+import ProjectPage from "./pages/ProjectPage/ProjectPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
 import ResumePage from "./pages/ResumePage/ResumePage";
 
@@ -24,19 +24,6 @@ class App extends React.Component {
         { title: "Github", path: "/" },
         { title: "Contact", path: "/contact" },
       ],
-      home: {
-        title: "Tam Nguyen",
-        subtitle: "Software Engineering",
-        subtitle2: "Web Development",
-        subtitle3: "Mobile Apps",
-        text: "Description",
-      },
-      about: {
-        title: "About Me",
-      },
-      contact: {
-        title: "Let's talk",
-      },
     };
   }
   render() {
@@ -55,7 +42,7 @@ class App extends React.Component {
                 <Link className="nav-link" to="/about">
                   About
                 </Link>
-                <Link className="nav-link" to="/">
+                <Link className="nav-link" to="/projects">
                   Projects
                 </Link>
 
@@ -88,29 +75,11 @@ class App extends React.Component {
             </Navbar.Collapse>
           </Navbar>
 
-          <Route
-            path="/"
-            exact
-            //component={HomePage}
-            render={() => (
-              <HomePage
-                title={this.state.home.title}
-                subtitle={this.state.home.subtitle}
-                subtitle2={this.state.home.subtitle2}
-                subtitle3={this.state.home.subtitle3}
-                text={this.state.home.text}
-              />
-            )}
-          ></Route>
-          <Route
-            path="/about"
-            render={() => <AboutPage title={this.state.about.title} />}
-          ></Route>
-          <Route
-            path="/contact"
-            render={() => <ContactPage title={this.state.contact.title} />}
-          ></Route>
-          <Route path="/resume" render={() => <ResumePage />}></Route>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/about" component={AboutPage} />
+          <Route path="/projects" component={ProjectPage} />
+          <Route path="/contact" component={ContactPage} />
+          <Route path="/resume" component={ResumePage} />
           <Footer />
         </Container>
       </Router>

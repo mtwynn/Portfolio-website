@@ -5,7 +5,7 @@ import Content from "../../components/Content";
 function AboutPage(props) {
   return (
     <div>
-      <Hero title={props.title}></Hero>
+      <Hero title={"About me"}></Hero>
       <Content>
         <p>Hello, my name is Tam.</p>
       </Content>
