@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Col, Container, Image, Jumbotron, Row } from "react-bootstrap";
 import { Button } from "@material-ui/core";
 import { ArrowForward } from "@material-ui/icons";

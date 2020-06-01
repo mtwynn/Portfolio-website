@@ -77,13 +77,24 @@ a {
 }
 
 .img-interest {
-  width: 10%;
+  width: auto;
   height: auto;
 }
 
 .img-toolkit {
   width: 30%;
   height: auto;
+}
+
+.float-card {
+  margin-top: 5px;
+  -webkit-transition: margin 0.5s ease-out;
+  -moz-transition: margin 0.5s ease-out;
+  -o-transition: margin 0.5s ease-out;
+}
+
+.float-card:hover {
+  margin-top: 20px;
 }
 
 @keyframes float {

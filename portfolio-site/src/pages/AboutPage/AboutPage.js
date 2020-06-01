@@ -15,8 +15,7 @@ let AboutPage = (props) => {
           I'm a current 4th year student at the University of California,
           Irvine, graduating in June 2020 with a B.S. in Computer Science and a
           minor in Informatics. I'll be starting a full-time position as a
-          software engineer for Integrity Security Services, LLC that same
-          month.
+          software engineer at Integrity Security Services, LLC that same month.
         </p>
         <p>
           I was born in Vietnam and am originally from the Bay Area. I found my

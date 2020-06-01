@@ -1,6 +1,7 @@
 import React from "react";
 import HeroHome from "./HeroHome";
 import BodyHome from "./BodyHome";
+import ProjectsHome from "./ProjectsHome";
 import Carousel from "../../components/Carousel";
 import { Col, Container, Row } from "react-bootstrap";
 import { Image } from "react-bootstrap";
@@ -37,6 +38,17 @@ let HomePage = (props) => {
         }}
       >
         <BodyHome />
+      </div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "93vh",
+          width: "100vw",
+        }}
+      >
+        <ProjectsHome />
       </div>
     </>
   );

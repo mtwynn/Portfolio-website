@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import { useTransition, useSpring, useChain, config } from "react-spring";
+import { Image } from "react-bootstrap";
 import { Build } from "@material-ui/icons";
 import { Container, Item } from "./styles";
 import FadeIn from "react-fade-in";
@@ -8,7 +9,6 @@ import data from "./data";
 let BodyHome = (props) => {
   const [open, set] = useState(false);
   const [showToolKit, setShowToolKit] = useState(true);
-  const [showOpen, setShowOpen] = useState(false);
 
   const springRef = useRef();
   const { size, opacity, ...rest } = useSpring({
@@ -76,8 +76,8 @@ let BodyHome = (props) => {
               margin: "auto",
             }}
           >
-            <div style={{ transform: "translateY(1em)" }}>
-              <img className="img-toolkit" src={item.img} />
+            <div style={{ transform: "translateY(1.4em)" }}>
+              <Image src={item.img} fluid></Image>
               <h4 style={{ fontSize: "1.3em", color: "#505050" }}>
                 {item.text}
               </h4>
