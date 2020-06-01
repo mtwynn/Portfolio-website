@@ -29,35 +29,6 @@ class Hero extends React.Component {
                   </h1>
                 )}
               </FadeIn>
-              <FadeIn delay="800" transitionDuration="1000">
-                <Typist className="h3 font-weight-light">
-                  Software Engineer
-                  <Typist.Backspace count={20} delay={1500} />
-                  Web Developer
-                  <Typist.Backspace count={13} delay={1500} />
-                  iOS Developer
-                  <Typist.Backspace count={20} delay={1500} />
-                  Checkout my projects below!
-                </Typist>
-              </FadeIn>
-
-              <FadeIn delay="1500" transitionDuration="1000">
-                <br />
-                <Button
-                  style={{
-                    fontWeight: "bold",
-                  }}
-                  variant="contained"
-                >
-                  <Link
-                    style={{ color: "#000", textDecoration: "none" }}
-                    href="/resume"
-                  >
-                    Resume
-                  </Link>
-                  <ArrowForward />
-                </Button>
-              </FadeIn>
             </Col>
           </Row>
         </Container>
