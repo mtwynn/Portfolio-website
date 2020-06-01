@@ -52,7 +52,7 @@ let HeroHome = (props) => {
           <Col md={4}>
             <Image
               width="60%"
-              src="/resources/pro-pic.png"
+              src="/resources/pro-pic.jpg"
               roundedCircle
               fluid
               style={{
