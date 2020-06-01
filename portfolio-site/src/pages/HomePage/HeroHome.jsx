@@ -39,7 +39,7 @@ let HeroHome = (props) => {
                   textDecoration: "none",
                 }}
                 variant="contained"
-                href="/projects"
+                onClick={props.scrollToProjects}
               >
                 Projects
                 <ArrowForward />
@@ -50,15 +50,18 @@ let HeroHome = (props) => {
         <Row className="justify-content-right pt-5">
           <Col></Col>
           <Col md={4}>
-            <Image
-              width="60%"
-              src="/resources/pro-pic.jpg"
-              roundedCircle
-              fluid
-              style={{
-                animation: "float 4s ease-in-out infinite",
-              }}
-            />
+            <FadeIn transitionDuration="1000">
+              <Image
+                width="60%"
+                src="/resources/pro-pic.jpg"
+                roundedCircle
+                fluid
+                style={{
+                  animation: "float 4s ease-in-out infinite",
+                }}
+                onClick={() => console.log("OK")}
+              />
+            </FadeIn>
           </Col>
         </Row>
         <Row className="justify-content-center">
@@ -69,7 +72,7 @@ let HeroHome = (props) => {
               style={{
                 marginRight: "4%",
               }}
-            />
+            ></Image>
             <Image
               className="img-interest"
               src="/resources/cycling-icon.png"

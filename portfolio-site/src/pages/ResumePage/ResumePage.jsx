@@ -2,6 +2,7 @@ import React from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import { Button, Link } from "@material-ui/core";
 import FadeIn from "react-fade-in";
+import { Fade } from "@material-ui/core";
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 let Resume = (props) => {
@@ -18,7 +19,7 @@ let Resume = (props) => {
         <Document file="resources/resume.pdf">
           <Page pageNumber={1} scale={2} />
         </Document>
-        <Button variant="contained" style={{ backgroundColor: "#4DABF5" }}>
+        <Button variant="contained" style={{ backgroundColor: "#35baf6" }}>
           <Link
             style={{
               color: "#FFF",

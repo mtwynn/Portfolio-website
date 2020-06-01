@@ -1,11 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import HeroHome from "./HeroHome";
-import BodyHome from "./BodyHome";
-import ProjectsHome from "./ProjectsHome";
-import Carousel from "../../components/Carousel";
-import { Col, Container, Row } from "react-bootstrap";
-import { Image } from "react-bootstrap";
-import { Waypoint } from "react-waypoint";
+import BodyHome from "./sections/toolkit/BodyHome";
+import ProjectsHome from "./sections/projects/ProjectsHome";
 
 let HomePage = (props) => {
   const fields = {
@@ -16,6 +12,15 @@ let HomePage = (props) => {
     subtitle4: "Check out my projects!",
   };
 
+  const scrollToRef = (ref) => {
+    ref.current.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+    });
+  };
+  const myRef = useRef(null);
+  const executeScroll = () => scrollToRef(myRef);
+
   return (
     <>
       <div>
@@ -25,6 +30,7 @@ let HomePage = (props) => {
           subtitle2={fields.subtitle2}
           subtitle3={fields.subtitle3}
           subtitle4={fields.subtitle4}
+          scrollToProjects={executeScroll}
         />
       </div>
       <div
@@ -35,6 +41,9 @@ let HomePage = (props) => {
           height: "93vh",
           width: "100vw",
           backgroundColor: "#e3e3e3",
+          backgroundImage: "url('resources/gears.png');",
+          backgroundAttachment: "fixed",
+          backgroundSize: "cover",
         }}
       >
         <BodyHome />
@@ -48,7 +57,7 @@ let HomePage = (props) => {
           width: "100vw",
         }}
       >
-        <ProjectsHome />
+        <ProjectsHome refProp={myRef} />
       </div>
     </>
   );
