@@ -64,13 +64,14 @@ let HeroHome = (props) => {
         <Row className="justify-content-center">
           <Col md={8} sm={12}>
             <Image
+              className="img-interest"
               src="/resources/coding-icon.png"
-              fluid
               style={{
                 marginRight: "4%",
               }}
             />
             <Image
+              className="img-interest"
               src="/resources/cycling-icon.png"
               fluid
               style={{
@@ -78,13 +79,18 @@ let HeroHome = (props) => {
               }}
             />
             <Image
+              className="img-interest"
               src="/resources/dj-icon.png"
               fluid
               style={{
                 marginRight: "4%",
               }}
             />
-            <Image src="/resources/piano-icon.png" fluid />
+            <Image
+              className="img-interest"
+              src="/resources/piano-icon.png"
+              fluid
+            />
           </Col>
         </Row>
       </Container>

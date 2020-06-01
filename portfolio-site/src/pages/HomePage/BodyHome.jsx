@@ -76,9 +76,11 @@ let BodyHome = (props) => {
               margin: "auto",
             }}
           >
-            <div style={{ transform: "translateY(25%)" }}>
-              <img src={item.img} />
-              <h4 style={{ color: "#505050" }}>{item.text}</h4>
+            <div style={{ transform: "translateY(1em)" }}>
+              <img className="img-toolkit" src={item.img} />
+              <h4 style={{ fontSize: "1.3em", color: "#505050" }}>
+                {item.text}
+              </h4>
             </div>
           </Item>
         ))}

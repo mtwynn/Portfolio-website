@@ -62,7 +62,7 @@ class ContactPage extends React.Component {
   render() {
     return (
       <div>
-        <Hero title={"Let's chat"} />
+        <Hero title={"Let's Chat"} />
         <Content>
           <Form onSubmit={this.handleSubmit}>
             <Form.Group>

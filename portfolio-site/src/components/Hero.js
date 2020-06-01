@@ -28,6 +28,13 @@ class Hero extends React.Component {
                     {this.props.title}
                   </h1>
                 )}
+                {this.props.subtitle && (
+                  <FadeIn>
+                    <Typist startDelay="500" className="h3 font-weight-light">
+                      {this.props.subtitle}
+                    </Typist>
+                  </FadeIn>
+                )}
               </FadeIn>
             </Col>
           </Row>

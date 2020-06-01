@@ -76,6 +76,16 @@ a {
   transition: width 0.5s, height 0.5s, opacity 0.2s 0.2s;
 }
 
+.img-interest {
+  width: 10%;
+  height: auto;
+}
+
+.img-toolkit {
+  width: 30%;
+  height: auto;
+}
+
 @keyframes float {
   0% {
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Col, Row } from "react-bootstrap";
+import { Container, Col, Row, Image } from "react-bootstrap";
 
 function Content(props) {
   return (
